@@ -50,6 +50,9 @@ RUN npm -v
 
 RUN curl -o- -L https://yarnpkg.com/install.sh | bash
 
+#Add pa alias
+RUN echo "alias pa='php artisan'" >> ~/.bashrc
+
 RUN unlink /etc/localtime && ln -s /usr/share/zoneinfo/Etc/GMT-3 /etc/localtime
 
 WORKDIR /var/www/html
